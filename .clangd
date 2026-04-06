@@ -1,0 +1,9 @@
+CompileFlags:
+  Remove:
+    - -rdc=true
+    - -forward-unknown-to-host-compiler
+    - -gencode=*
+    - --generate-code=*
+    - --expt-relaxed-constexpr
+  Add:
+    - --cuda-path=/usr/local/cuda
