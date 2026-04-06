@@ -2,6 +2,7 @@
 
 #include "peak_kernels.cuh"
 #include "peakfinder/cuda_status.hpp"
+#include "peakfinder/log.hpp"
 
 #include <cuda_runtime.h>
 #include <thrust/device_ptr.h>
@@ -13,6 +14,7 @@
 namespace peakfinder {
 
 std::vector<int> find_peaks_gpu(const std::vector<int> &input) {
+  LogInfo("find_peaks_gpu()");
   const int n = static_cast<int>(input.size());
   if (n == 0) {
     return {};

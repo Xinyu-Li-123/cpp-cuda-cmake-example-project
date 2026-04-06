@@ -1,4 +1,5 @@
 #include "peakfinder/peak_utils.hpp"
+#include "peakfinder/log.hpp"
 
 namespace peakfinder {
 
@@ -20,6 +21,7 @@ bool is_peak_at(const std::vector<int> &input, std::size_t i) {
 }
 
 std::vector<int> find_peaks_cpu(const std::vector<int> &input) {
+  LogInfo("find_peaks_cpu()");
   std::vector<int> peaks;
   peaks.reserve(input.size() / 2 + 1);
 
